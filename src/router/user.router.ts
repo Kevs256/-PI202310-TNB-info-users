@@ -1,5 +1,5 @@
 import { Router } from "express";
-import commentController from "../controllers/user.controller.js";
+import userController from "../controllers/user.controller.js";
 
 class UserRouter {
 
@@ -11,7 +11,8 @@ class UserRouter {
     }
 
     private config(){
-        
+        this.router.route('/user/:id_usuario').get(userController.getById);
+        this.router.route('/user/:id_usuario').put(userController.modifyUsersById);
     }
 }
 
