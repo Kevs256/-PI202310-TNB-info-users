@@ -5,6 +5,7 @@ const getById = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { id_usuario } = req.params;
         const user = await userModel.findByPk(id_usuario);
+        console.log(user);
         if (user) {
             res.status(200).json({ status: true, data: user });
         } else {
@@ -25,7 +26,7 @@ const modifyUsersById = async (req: Request, res: Response, next: NextFunction) 
             res.status(404).json({ info: 'usuario no existe' })
         } else {
             await user.update({
-                coin: body.coins,
+                coins: body.coins,
             });
             res.status(200).json({status:true, info: 'Se actualizo el usuario con exito'})
         }

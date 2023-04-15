@@ -13,7 +13,7 @@ export default db.define('User', {
       primaryKey: true,
       type: DataTypes.NUMBER},
     id_user: DataTypes.STRING,
-    coin: DataTypes.NUMBER,
+    coins: DataTypes.NUMBER,
     id_deck: DataTypes.STRING,
     balance: DataTypes.NUMBER,
     remaining_games: DataTypes.NUMBER,
