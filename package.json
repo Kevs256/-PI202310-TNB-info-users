@@ -25,6 +25,7 @@
     "mongodb": "^5.2.0",
     "mongoose": "^7.0.3",
     "morgan": "^1.10.0",
+    "sequelize": "^6.31.0",
     "tsc": "^2.0.4",
     "typescript": "^5.0.4"
   },
